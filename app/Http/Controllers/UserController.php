@@ -30,7 +30,8 @@ class UserController extends Controller
             'personas.num_documento','personas.direccion','personas.telefono',
             'personas.email','users.usuario','users.password',
             'users.condicion','users.idrol','roles.nombre as rol')
-            
+            ->orderBy('personas.id','desc')->paginate(3);
         }
     }
 }
+
